@@ -11,35 +11,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header>
+<header id="top">
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-header logo-menu">
-                <img src="img/logo-devpro.png">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#"><img src="img/logo-devpro.png"></a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="text-center"><a href="#">Trang chủ</a></li>
-                <li class="text-center">
-                    <a href="#">Giới thiệu <span class="caret"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="#">DevPro Việt Nam</a></li>
-                        <li><a href="#">Đội ngũ giảng viên</a></li>
-                    </ul>
-                </li>
-                <li class="text-center">
-                    <a href="#">Khóa học <span class="caret"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Khóa học lập trình PHP</a></li>
-                        <li><a href="#">Khóa học lập trình Android</a></li>
-                        <li><a href="#">Khóa học lập trình lam game Unity</a></li>
-                        <li><a href="#">Khóa học lập trình PHP</a></li>
-                    </ul>
-                </li>
-                <li class="text-center">
-                    <a href="#">Giới thiệu</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="text-center"><a href="#">Trang chủ</a></li>
+                    <li class="dropdown text-center">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Giới thiệu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">DevPro Việt Nam</a></li>
+                            <li><a href="#">Đội ngũ giảng viên</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown text-center">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Khóa học <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Khóa học lập trình PHP</a></li>
+                            <li><a href="#">Khóa học lập trình Android</a></li>
+                            <li><a href="#">Khóa học lập trình lam game Unity</a></li>
+                            <li><a href="#">Khóa học lập trình PHP</a></li>
+                        </ul>
+                    </li>
+                    <li class="text-center"><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -59,10 +63,6 @@
                     <p class="fa fa-info-circle"></p>
                     <h2>Tổng quan</h2>
                 </div>
-                <div class="col-md-3 text-center category" id="toContact">
-                    <p class="glyphicon glyphicon-phone-alt"></p>
-                    <h2>Tư vấn</h2>
-                </div>
                 <div class="col-md-3 text-center category" id="toSchedule">
                     <p class="fa fa-book"></p>
                     <h2>Chương trình học</h2>
@@ -75,10 +75,15 @@
                     <p class="fa fa-user-plus"></p>
                     <h2>Đăng kí</h2>
                 </div>
+                <div class="col-md-3 text-center category" id="toContact">
+                    <p class="glyphicon glyphicon-phone-alt"></p>
+                    <h2>Tư vấn</h2>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<div id="toTop" class="btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></div>
 <div class="container content">
     <div class="row content-item" id="tutorial">
         <h2 class="title">TỔNG QUAN</h2>
@@ -89,7 +94,7 @@
                 để đáp ứng nhu cầu về nhân lực chuẩn quốc tế cho các doanh nghiệp trong việc
                 nghiên cứu tìm hiểu và phát triển các ứng dụng web.
             </p>
-            <div class="col-md-6 tutorial-content-item " id="target_users">
+            <div class="col-md-6 tutorial-content-item pull-left" id="target_users">
                 <h1><i class="fa fa-question-circle-o"></i></h1>
                 <h3 class="sub-title">Ai nên tham gia khóa học:</h3>
                 <ul>
@@ -101,7 +106,7 @@
 
                 </ul>
             </div>
-            <div class="col-md-6 tutorial-content-item" id="benifit">
+            <div class="col-md-6 tutorial-content-item pull-right" id="benifit">
                 <h1><i class="fa fa-child"></i></h1>
                 <h3 class="sub-title">Lợi ích của khóa học:</h3>
                 <ul>
@@ -113,7 +118,7 @@
 
                 </ul>
             </div>
-            <div class="col-md-6 tutorial-content-item " id="result">
+            <div class="col-md-6 tutorial-content-item pull-left" id="result">
                 <h1><i class="fa fa-graduation-cap"></i></h1>
                 <h3 class="sub-title">Kết quả sau Khóa học Lập trình PHP&MySQL</h3>
                 <ul>
@@ -121,7 +126,7 @@
                     <li>Bằng lý thuyết ngắn gọn kết hợp thực hành liên tục, theo dự án ngay trong quá trình học, DevPro sẽ giúp học viên học từng bước (step by step) từ kiến thức cơ bản đến nâng cao như cơ sở dữ liệu MySQL, lập trình PHP thuần, lập trình PHP theo hướng đối tượng, Framework Laravel...</li>
                 </ul>
             </div>
-            <div class="col-md-6 tutorial-content-item" id="profit">
+            <div class="col-md-6 tutorial-content-item pull-right" id="profit">
                 <h1><i class="fa fa-money"></i></h1>
                 <h3 class="sub-title">Quyền lợi khi tham gia khóa học:</h3>
                 <ul>
@@ -138,7 +143,7 @@
     <div class="row content-item" id="schedule">
         <h2 class="title">Chương trình đào tạo</h2>
         <div class="hr"></div>
-        <div class="row col-md-12 schedule-item" id="front-end">
+        <div class="row schedule-item" id="front-end">
             <div class="title">
                 PHẦN 1: Front - End ( HTML, CSS, JS, BOOTSTRAP, JQUERY, …)
             </div>
@@ -258,7 +263,7 @@
                 </div>
             </div>
         </div>
-        <div class="row col-md-12 schedule-item" id="back-end">
+        <div class="row schedule-item" id="back-end">
             <div class="title">
                 PHẦN 2: Back – End ( PHP, database MySQL)
             </div>
@@ -424,7 +429,7 @@
                 </div>
             </div>
         </div>
-        <div class="row col-md-12 schedule-item" id="laravel">
+        <div class="row schedule-item" id="laravel">
             <div class="title">
                 PHẦN 3: Framework Laravel
             </div>
@@ -633,7 +638,34 @@
         </div>
     </div>
 </div>
+<footer class="container-fluid">
+    <div class="container">
+        <h3 class="col-md-12 text-center">
+            CÔNG TY CỔ PHẦN DEVPRO VIỆT NAM
+        </h3>
+        <h3 class="text-center">
+            <img src="img/logo-devpro.png">
+        </h3>
+        <div class="dev-info text-center">
+            <span>Địa chỉ: Tầng 6, 147 Mai Dịch, Cầu Giấy, Hà Nội. </span>&nbsp;-
+            <span>Hotline:0985 95 08 95 </span>&nbsp;-
+            <span>Email: contact@devpro.vn (Ms Hằng)</span>
+        </div>
+    </div>
+</footer>
 <script>
+    $(window).scroll(function () {
+        if($(this).scrollTop() > 500){
+            $('#toTop').fadeIn('slow');
+        }else{
+            $('#toTop').fadeOut('slow');
+        }
+    });
+    $('#toTop').click(function () {
+        $('html,body').animate({
+                    scrollTop: $("#top").offset().top},
+                'slow');
+    });
     $('.category').click(function () {
        var id = $(this).attr('id');
        id = id.substr(2);
